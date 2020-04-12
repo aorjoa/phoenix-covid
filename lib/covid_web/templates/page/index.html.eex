@@ -1,8 +1,16 @@
 <section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Covid" %></h1>
+  <h1>
+  <%= covid_19 %>
+
+  <%= gettext "Welcome to %{name}!", name: "Covid" %></h1>
   <p>A productive web framework that<br/>does not compromise speed and maintainability.</p>
 </section>
 
+<div>
+<%= for virus <- @viruses do %>
+  <div><%= upper_case_name virus %><div>
+<%end%>
+</div>
 <section class="row">
   <article class="column">
     <h2>Resources</h2>
